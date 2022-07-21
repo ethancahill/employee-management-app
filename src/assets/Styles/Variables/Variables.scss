@@ -8,3 +8,23 @@ $brass: rgb(196, 158, 133);
 // Fonts
 $titleFont: Arial, Helvetica, sans-serif;
 $bodyFont: "Times New Roman", Times, serif;
+
+// Buttons
+@mixin buttonStyle {
+  width: 200px;
+  height: 40px;
+  background-color: $darkColor;
+  background-image: linear-gradient($darkColor, grey);
+  border: none;
+  border-radius: 8px;
+  color: $lightBlue;
+  font-size: 25px;
+  &:hover {
+    opacity: 85%;
+    color: $darkBlue;
+  };
+  &:active {
+    box-shadow: 0 5px $lightBlue;
+    transform: translateY(4px);
+  }
+}

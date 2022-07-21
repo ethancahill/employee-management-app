@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;ECWL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAdN,OAAe;EAezB,gBAAgB,EAAE,8BAAiC;EACnD,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,GAAG;EAClB,KAAK,EAjBK,OAAkB;EAkB5B,SAAS,EAAE,IAAI;CDhBhB;;AAFD,ACmBE,MDnBI,ACmBH,OAAO,CAAC;EACP,UAAU,EAAE,CAAC,CAAC,GAAG,CApBT,OAAkB;EAqB1B,SAAS,EAAE,eAAe;EAC1B,OAAO,EAAE,IAAI;CACd;;ADvBH,ACwBE,MDxBI,ACwBH,MAAM,CAAC;EACN,OAAO,EAAE,GAAG;EACZ,KAAK,EAzBE,OAAiB;CA0BzB",
+    "sources": [
+        "createEmployee.scss",
+        "../Variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "createEmployee.css"
+}
