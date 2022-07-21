@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #474350;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.navbar li {
+  color: #c1eeff;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  color: #1282a2;
+}
+
+.navbar .links {
+  margin-left: 50px;
+}
+/*# sourceMappingURL=Navbar.css.map */
