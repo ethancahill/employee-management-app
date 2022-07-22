@@ -1,30 +1,26 @@
 import React from "react";
-import "../../assets/Styles/DisplayEmployees/DisplayEmployees.css"
+import "../../assets/Styles/DisplayEmployees/DisplayEmployees.css";
 
 function DisplayEmployees() {
-    return(
-        <>
-        <div className="title">
-            <h1>Employees</h1>
-        </div>
-        <section className="employee-display">
+  return (
+    <>
+      <div className="title">
+        <h1>Employees</h1>
+      </div>
+      <section className="employee-display">
         <div className="employee">
-            <h3>Employee Name</h3>
-            <div className="employee-id">
-                Employee ID
-            </div>
-            <div className="email-address">
-                Email Address
-            </div>
-            <div className="phone-number">
-                Phone Number
-            </div>
-            <button id="edit-button">Edit Employee</button>
-            <button id="delete-button">Delete Employee</button>
+          <h3>Employee Name</h3>
+          <div className="employee-datas">
+            <div className="employee-data">Employee ID</div>
+            <div className="employee-data">Email Address</div>
+            <div className="employee-data">Phone Number</div>
+          </div>
+          <button id="edit-button">Edit Employee</button>
+          <button id="delete-button">Delete Employee</button>
         </div>
-        </section>
-        </>
-    )
+      </section>
+    </>
+  );
 }
 
-export default DisplayEmployees
+export default DisplayEmployees;

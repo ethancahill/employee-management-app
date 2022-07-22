@@ -15,28 +15,31 @@
   font-size: 15px;
   font-weight: bolder;
   margin: 5px;
+  border-radius: 0;
 }
 
 .employee button:hover {
   opacity: .85;
-  color: rgba(0, 0, 0, 0.856);
+  color: grey;
 }
 
 .employee button:active {
-  -webkit-box-shadow: 0 5px rgba(255, 255, 255, 0.342);
-          box-shadow: 0 5px rgba(255, 255, 255, 0.342);
+  -webkit-box-shadow: 0 5px #c1eeff;
+          box-shadow: 0 5px #c1eeff;
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
 }
 
+.employee button:hover {
+  color: #c1eeff;
+}
+
 #edit-button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#09e709), to(#00a676));
-  background-image: linear-gradient(#09e709, #00a676);
+  background-image: radial-gradient(#00a676, #474350);
 }
 
 #delete-button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.322)), to(red));
-  background-image: linear-gradient(rgba(255, 0, 0, 0.322), red);
+  background-image: radial-gradient(red, #474350);
   font-size: 13px;
 }
 
@@ -55,6 +58,8 @@
 }
 
 .employee {
+  max-height: 200px;
+  max-width: 300px;
   margin: 15px;
   border: 6px;
   border-radius: 3px;
@@ -63,5 +68,23 @@
   background-color: grey;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#1282a2));
   background-image: linear-gradient(white, #1282a2);
+}
+
+.employee-datas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.employee-data {
+  margin: 10px;
 }
 /*# sourceMappingURL=DisplayEmployees.css.map */
