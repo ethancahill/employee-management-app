@@ -2,8 +2,7 @@
 
 button {
   @include buttonStyle();
-  margin-left: auto;
-  margin-right: auto;
+
 }
 
 h1 {
@@ -24,7 +23,6 @@ form {
 
 .addEmployee input {
     display: table-cell;
-    width: 12rem;
     height: 1.5rem;
     margin-bottom: .5rem;
     font-size: 1rem;
@@ -39,8 +37,8 @@ form {
 
 .addEmployee label {
     display:table-cell;
-    width: 1rem;
-    text-align: right;
+      text-align: right;
+
 }
 
 label+input {

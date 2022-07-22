@@ -1,0 +1,67 @@
+button {
+  width: 150px;
+  height: 30px;
+  background-color: #474350;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#474350), to(grey));
+  background-image: linear-gradient(#474350, grey);
+  border: none;
+  border-radius: 8px;
+  color: #c1eeff;
+  font-size: 18px;
+  -webkit-transition: all .2s ease 0s;
+  transition: all .2s ease 0s;
+  height: 20px;
+  width: 85px;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+button:hover {
+  opacity: .85;
+  color: #1282a2;
+}
+
+button:active {
+  -webkit-box-shadow: 0 5px #c1eeff;
+          box-shadow: 0 5px #c1eeff;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+#edit-button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#09e709), to(#00a676));
+  background-image: linear-gradient(#09e709, #00a676);
+}
+
+#delete-button {
+  font-size: 9px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.322)), to(red));
+  background-image: linear-gradient(rgba(255, 0, 0, 0.322), red);
+}
+
+.employee-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.employee {
+  margin: 15px;
+  border: 6px;
+  border-radius: 3px;
+  border-style: groove;
+  border-color: #c1eeff;
+  background-color: grey;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#1282a2));
+  background-image: linear-gradient(white, #1282a2);
+}
+/*# sourceMappingURL=DisplayEmployees.css.map */

@@ -1,0 +1,36 @@
+@import "../Variables/Variables.scss";
+
+button {
+    @include buttonStyle();
+    height: 20px;
+    width: 85px;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#edit-button{
+    background-image: linear-gradient(rgb(9, 231, 9), $darkGreen);
+}
+
+#delete-button{
+    font-size: 9px;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.322), red)
+}
+
+.employee-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee {
+    margin: 15px;
+    border: 6px;
+    border-radius: 3px;
+    border-style: groove;
+    border-color: $lightBlue;
+    background-color: grey;
+    background-image: linear-gradient(white, $darkBlue);
+}

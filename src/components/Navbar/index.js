@@ -9,15 +9,15 @@ function Navbar(props) {
       <div className="links">
           <ul>
         <li>
-        <span onClick={() => setAddSelected(false)}>Home</span>
+        <span onClick={() => setAddSelected('')}>Home</span>
         </li>
         <li>
-        <span href="/createEmployee" onClick={() => setAddSelected(true)}>
+        <span href="/createEmployee" onClick={() => setAddSelected('create')}>
           Add a New Employee
         </span>
         </li>
         <li>
-        <span href="/getEmployees" onClick={() => setAddSelected(false)}>
+        <span href="/getEmployees" onClick={() => setAddSelected('display')}>
           View All Employees
         </span>
         </li>

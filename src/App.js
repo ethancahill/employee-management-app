@@ -2,13 +2,26 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
 import CreateEmployee from './components/CreateEmployee'
-import { useState } from "react"
+import DisplayEmployees from './components/DisplayEmployees';
+import { useState, useEffect } from "react"
 
 
 function App() {
 
-  const [addSelected, setAddSelected] = useState(false)
+  const [addSelected, setAddSelected] = useState('')
 
+useEffect(() =>{
+  document.title = 'Employee Database'
+})
+
+ function renderPage(page){
+    switch(page){
+      case '': return <Homepage />;
+      case 'create': return <CreateEmployee />;
+      case 'display': return <DisplayEmployees />;
+      default: return <Homepage />;
+    }
+  }
   return (
     <div className="App">
       <Navbar 
@@ -16,14 +29,11 @@ function App() {
       setAddSelected={setAddSelected}
       />
       <main>
-        {!addSelected ? (
-          <Homepage />
-        ) : (
-          <CreateEmployee />
-        )}
+        {renderPage(addSelected)}
       </main>
     </div>
   );
 }
+
 
 export default App;
