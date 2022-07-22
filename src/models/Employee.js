@@ -6,7 +6,7 @@ const employeeSchema = new Schema (
        employeeId: {
            type: Number,
            unique: true,
-           required: "you must have an employee id";
+           required: "you must have an employee id",
            trim: true
        },
        firstName: {
