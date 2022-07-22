@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAKtB;;AARD,AAKI,SALK,CAKL,EAAE,CAAC;EACC,KAAK,ECFA,OAAc;CDGpB",
+    "sources": [
+        "homepage.scss",
+        "../Variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "homepage.css"
+}

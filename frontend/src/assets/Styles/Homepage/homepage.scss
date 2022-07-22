@@ -1,0 +1,11 @@
+@import "../Variables/Variables.scss";
+
+.homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $titleColor
+      }
+}
