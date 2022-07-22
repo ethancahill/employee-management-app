@@ -1,4 +1,4 @@
-button {
+.employee button {
   width: 150px;
   height: 30px;
   background-color: #474350;
@@ -6,25 +6,25 @@ button {
   background-image: linear-gradient(#474350, grey);
   border: none;
   border-radius: 8px;
-  color: #c1eeff;
+  color: white;
   font-size: 18px;
   -webkit-transition: all .2s ease 0s;
   transition: all .2s ease 0s;
-  height: 20px;
-  width: 85px;
-  font-size: 10px;
-  font-weight: bold;
+  height: 35px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: bolder;
   margin: 5px;
 }
 
-button:hover {
+.employee button:hover {
   opacity: .85;
-  color: #1282a2;
+  color: rgba(0, 0, 0, 0.856);
 }
 
-button:active {
-  -webkit-box-shadow: 0 5px #c1eeff;
-          box-shadow: 0 5px #c1eeff;
+.employee button:active {
+  -webkit-box-shadow: 0 5px rgba(255, 255, 255, 0.342);
+          box-shadow: 0 5px rgba(255, 255, 255, 0.342);
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
 }
@@ -35,9 +35,9 @@ button:active {
 }
 
 #delete-button {
-  font-size: 9px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.322)), to(red));
   background-image: linear-gradient(rgba(255, 0, 0, 0.322), red);
+  font-size: 13px;
 }
 
 .employee-display {

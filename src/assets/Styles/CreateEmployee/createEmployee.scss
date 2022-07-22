@@ -1,7 +1,7 @@
 @import "../Variables/Variables.scss";
 
 button {
-  @include buttonStyle();
+  @include buttonStyle($lightBlue, $darkBlue, $lightBlue);
 
 }
 
