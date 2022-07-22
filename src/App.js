@@ -8,7 +8,7 @@ import { useState, useEffect } from "react"
 
 function App() {
 
-  const [addSelected, setAddSelected] = useState('')
+  const [getSelected, setSelected] = useState('')
 
 useEffect(() =>{
   document.title = 'Employee Database'
@@ -25,11 +25,10 @@ useEffect(() =>{
   return (
     <div className="App">
       <Navbar 
-      addSelected={addSelected}
-      setAddSelected={setAddSelected}
+      setSelected={setSelected}
       />
       <main>
-        {renderPage(addSelected)}
+        {renderPage(getSelected)}
       </main>
     </div>
   );

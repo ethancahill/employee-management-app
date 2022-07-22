@@ -52,7 +52,7 @@ function CreateEmployee() {
       <h1>Add a New Employee</h1>
       <form className="addEmployee" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="employeeId">Employee Id:</label>
+          <label htmlFor="employeeId">Employee ID:</label>
           <input
             type="text"
             name="employeeId"
