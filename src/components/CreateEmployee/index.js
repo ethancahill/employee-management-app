@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { validateEmail } from "../../utils/helpers"
-import "../../assets/Styles/CreateEmployee/createEmployee.css"
+import { validateEmail } from "../../utils/helpers";
+import "../../assets/Styles/CreateEmployee/createEmployee.css";
 
 function CreateEmployee() {
-
-const [formState, setFormState] = useState({
-    employeeId: "",
+  const [formState, setFormState] = useState({
+    employeeID: "",
     firstName: "",
     lastName: "",
     email: "",
-    phoneNumber: ""
+    phoneNumber: "",
   });
 
-  const {employeeId, firstName, lastName, email, phoneNumber} = formState
-  
+  const { employeeID, firstName, lastName, email, phoneNumber } = formState;
+
   const [errorMessage, setErrorMessage] = useState("");
 
   function handleChange(e) {
@@ -27,7 +26,13 @@ const [formState, setFormState] = useState({
       }
     } else {
       if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required`);
+        setErrorMessage(
+          `${e.target.name
+            .replace(/([A-Z])/g, " $1")
+            .replace(/^./, function (str) {
+              return str.toUpperCase();
+            })} is required`
+        );
       } else {
         setErrorMessage("");
       }
@@ -42,64 +47,64 @@ const [formState, setFormState] = useState({
     console.log(formState);
   }
 
-    return(
-        <section>
-            <h1>Add a New Employee</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="employeeId">Employee Id:</label>
-                    <input 
-                    type="text"
-                    name="employeeId"
-                    defaultValue={employeeId}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="firstName">First Name:</label>
-                    <input 
-                    type="text"
-                    name="firstName"
-                    defaultValue={firstName}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="lastName">Last Name:</label>
-                    <input 
-                    type="text"
-                    name="lastName"
-                    defaultValue={lastName}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                    type="email"
-                    name="email"
-                    defaultValue={email}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="phoneNumber">Phone Number:</label>
-                    <input 
-                    type="number"
-                    name="phoneNumber"
-                    defaultValue={phoneNumber}
-                    onBlur={handleChange}
-                    />
-                    {errorMessage && (
-                        <div>
-                            <p className="error-txt">{errorMessage}</p>
-                        </div>
-                    )}
-                </div>
-                <button type="submit">Add Employee</button>
-            </form>
-        </section>
-    )
+  return (
+    <section>
+      <h1>Add a New Employee</h1>
+      <form className="addEmployee" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="employeeId">Employee Id:</label>
+          <input
+            type="text"
+            name="employeeId"
+            defaultValue={employeeID}
+            onBlur={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            name="firstName"
+            defaultValue={firstName}
+            onBlur={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            name="lastName"
+            defaultValue={lastName}
+            onBlur={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            defaultValue={email}
+            onBlur={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type="number"
+            name="phoneNumber"
+            defaultValue={phoneNumber}
+            onBlur={handleChange}
+          />
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+        </div>
+        <button type="submit">Add Employee</button>
+      </form>
+    </section>
+  );
 }
 
-export default CreateEmployee
+export default CreateEmployee;

@@ -4,6 +4,7 @@ $lightBlue: rgb(193, 238, 255);
 $darkBlue: rgb(18, 130, 162);
 $darkGreen: rgb(0, 166, 118);
 $brass: rgb(196, 158, 133);
+$titleColor: rgb(3, 33, 78);
 
 // Fonts
 $titleFont: Arial, Helvetica, sans-serif;
@@ -11,20 +12,23 @@ $bodyFont: "Times New Roman", Times, serif;
 
 // Buttons
 @mixin buttonStyle {
-  width: 200px;
-  height: 40px;
+  width: 150px;
+  height: 30px;
   background-color: $darkColor;
   background-image: linear-gradient($darkColor, grey);
   border: none;
   border-radius: 8px;
   color: $lightBlue;
-  font-size: 25px;
+  font-size: 18px;
+  transition: all .2s ease 0s;
   &:hover {
-    opacity: 85%;
+    opacity: .85;
     color: $darkBlue;
   };
   &:active {
     box-shadow: 0 5px $lightBlue;
     transform: translateY(4px);
-  }
-}
+  };
+
+
+};
