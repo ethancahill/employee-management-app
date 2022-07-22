@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
 import CreateEmployee from './components/CreateEmployee'
 import DisplayEmployees from './components/DisplayEmployees';
+import EditEmployee from './components/EditEmployee'
 import { useState, useEffect } from "react"
 
 

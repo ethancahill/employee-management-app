@@ -1,14 +1,15 @@
 import React, {useState, useEffect, Component, setStatus} from "react";
 import App from "../../App";
 import "../../assets/Styles/DisplayEmployees/DisplayEmployees.css";
+import EditEmployee from '../EditEmployee'
 
 class DisplayEmployees extends Component {
   constructor() {
     super();
-    this.state = {
-      employees: []
-    }
+    this.state = {employees: [], employee: null, changePage: false };
+    // this.editPage = this.editPage.bind(this);
   }
+
 
   componentDidMount() {
     fetch('/api/employee')
@@ -16,9 +17,9 @@ class DisplayEmployees extends Component {
     .then(employees => this.setState({employees}, () => console.log('employees fetched', employees)))
   }
 
-  
+ 
 
-  onClick = event => {
+  clickDelete = event => {
     let id = event.target.dataset.id;
     fetch(`/api/employee/${id}`, {method: 'DELETE'})
     .then(() => {
@@ -27,9 +28,30 @@ class DisplayEmployees extends Component {
   }
 
 
+
+editEmployee = event => {
+  let id = event.target.dataset.id;
+  fetch(`/api/employee/${id}`, {method: 'GET'})
+  .then(res => res.json())
+  .then(employee => {
+    this.setState({employee}, () => {
+      return console.log('employee selected', employee);
+    })
+  })
+  .then(() => this.setState({changePage: true}, () => {
+    console.log('page change set to true')
+  }))
+  .then(() => this.forceUpdate())
+}
+
+
   render() {
   return (
     <>
+    {this.state.changePage ? <EditEmployee 
+    employee={this.state.employee}
+    changePage={this.state.changePage}
+    /> : null}
       <div className="title">
         <h1>Employees</h1>
       </div>
@@ -44,8 +66,8 @@ class DisplayEmployees extends Component {
             }}>{employee.email}</a>
             <div className="employee-data">{employee.phoneNumber}</div>
           </div>
-          <button id="edit-button">Edit Employee</button>
-          <button id="delete-button" data-id={employee._id} onClick={this.onClick}>Delete Employee</button>
+          <button id="edit-button" data-id={employee._id} onClick={this.editEmployee}>Edit Employee</button>
+          <button id="delete-button" data-id={employee._id} onClick={this.clickDelete}>Delete Employee</button>
         </div>
         )}
       </section>
