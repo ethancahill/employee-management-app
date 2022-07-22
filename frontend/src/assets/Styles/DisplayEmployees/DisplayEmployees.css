@@ -87,4 +87,12 @@
 .employee-data {
   margin: 10px;
 }
+
+.lastname {
+  font-style: oblique;
+}
+
+.employee a {
+  color: #1282a2;
+}
 /*# sourceMappingURL=DisplayEmployees.css.map */

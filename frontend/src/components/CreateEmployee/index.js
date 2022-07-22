@@ -90,7 +90,7 @@ function CreateEmployee() {
         <div>
           <label htmlFor="phoneNumber">Phone Number:</label>
           <input
-            type="number"
+            type="tel"
             name="phoneNumber"
             defaultValue={phoneNumber}
             onBlur={handleChange}
