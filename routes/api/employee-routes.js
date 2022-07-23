@@ -1,4 +1,5 @@
-const router = require('express').Router;
+const router = require('express').Router();
+
 const {
     getAllEmployees,
     getEmployeeById,
@@ -13,9 +14,12 @@ router
     .post(createEmployee);
 
 router
-    .route('/one')
+    .route('/:id')
     .get(getEmployeeById)
     .put(updateEmployee)
     .delete(deleteEmployee);
+
+    
+
 
 module.exports = router;

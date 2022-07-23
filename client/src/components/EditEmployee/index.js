@@ -46,13 +46,13 @@ changeNumber(value){
 
   updateEmployee = (event) => {
     event.preventDefault();
-    let newEmployeeId = parseInt(this.state.employeeId);
+    let newEmployeeId = this.state.employeeId;
     let newFirstName = this.state.firstName;
     let newLastName = this.state.lastName;
     let newEmail = this.state.email;
     let newPhoneNumber = this.state.phoneNumber;
     let id = event.target.dataset.id;
-    fetch(`/api/employee/${id}`, {
+    fetch(`http://localhost:3001/api/employee/${id}`, {
     method: 'PUT', 
     headers: {
       "Content-type": "application/json"

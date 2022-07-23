@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
-const {validateEmail, validatePhoneNumber} = require('../utils/helpers');
+const {validateEmail} = require('../utils/helpers');
 
 const employeeSchema = new Schema (
     {
        employeeId: {
-           type: Number,
+           type: String,
            unique: true,
            required: "you must have an employee id",
            trim: true
@@ -27,10 +27,9 @@ const employeeSchema = new Schema (
            validate: [validateEmail, "Please input a valid email address"],
        },
        phoneNumber: {
-           type: Number,
+           type: String,
            unique: true,
            required: "you must enter a phone number",
-        validate: [validatePhoneNumber, "Please input a valid phone number"],
            trim: true
        }
     }

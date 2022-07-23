@@ -12,7 +12,7 @@ class DisplayEmployees extends Component {
 
 
   componentDidMount() {
-    fetch('/api/employee')
+    fetch('http://localhost:3001/api/employee')
     .then(res => res.json())
     .then(employees => this.setState({employees}, () => console.log('employees fetched', employees)))
   }
@@ -21,7 +21,7 @@ class DisplayEmployees extends Component {
 
   clickDelete = event => {
     let id = event.target.dataset.id;
-    fetch(`/api/employee/${id}`, {method: 'DELETE'})
+    fetch(`http://localhost:3001/api/employee/${id}`, {method: 'DELETE'})
     .then(() => {
       alert('Delete Successful')
     })
@@ -31,7 +31,7 @@ class DisplayEmployees extends Component {
 
 editEmployee = event => {
   let id = event.target.dataset.id;
-  fetch(`/api/employee/${id}`, {method: 'GET'})
+  fetch(`http://localhost:3001/api/employee/${id}`, {method: 'GET'})
   .then(res => res.json())
   .then(employee => {
     this.setState({employee}, () => {
