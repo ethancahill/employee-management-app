@@ -1,0 +1,6 @@
+@import "../Variables/Variables.scss";
+
+button {
+    @include buttonStyle(white, grey, $lightBlue);
+    height: 50px
+}

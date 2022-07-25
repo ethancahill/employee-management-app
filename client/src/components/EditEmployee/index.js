@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../assets/Styles/EditEmployee/EditEmployee.css";
 
 class EditEmployee extends Component {
   constructor() {

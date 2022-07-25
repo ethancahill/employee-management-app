@@ -13,7 +13,7 @@ $bodyFont: "Times New Roman", Times, serif;
 // Buttons
 @mixin buttonStyle($textColor, $hoverTextColor, $shadowColor) {
   width: 150px;
-  height: 30px;
+  height: 40px;
   background-color: $darkColor;
   background-image: linear-gradient($darkColor, grey);
   border: none;
