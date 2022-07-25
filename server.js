@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 
 app.use(require('./routes'));
+app.use(express.static(path.join(__dirname, './client/build')));
 
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://127.0.0.1:27017/employee-database');
 
